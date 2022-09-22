@@ -117,6 +117,7 @@
 
         .display_flex {
             display: flex;
+            margin: 0 !important;
         }
 
         .card {
@@ -126,9 +127,24 @@
 
         .search_col {
             border-right: 1px solid #bdbdbd;
-            height: 100%;
             padding: 10px;
             padding-top: 20px;
+        }
+
+        @media (min-width: 576px) {
+            .search_col {
+                border-right: 0px;
+                border-bottom: 1px solid #bdbdbd;
+                height: auto;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .search_col {
+                border-right: 1px solid #bdbdbd;
+                border-bottom: 0;
+                height: 100%;
+            }
         }
 
         td {
@@ -220,8 +236,8 @@
         </div>
         <div class="content">
             <div class="card">
-                <div class="col-xl-12 display_flex">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 search_col">
+                <div class="col-xl-12 display_flex row">
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 search_col">
                         <h4><u>Filters</u></h4>
                         <table class="table_spacer">
                             <tr>
@@ -294,7 +310,7 @@
                             <button class="btn1 class filter_btn">Submit</button>
                         </div>
                     </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 datatable_div">
+                    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12 datatable_div">
                         <table class="datatable table">
                             <thead>
                                 <th>Center Id</th>
